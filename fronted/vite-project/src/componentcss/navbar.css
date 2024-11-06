@@ -1,0 +1,168 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #333, #ff7f50);
+  color: white;
+  position: relative;
+}
+
+/* Left Section: Logo and Links */
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #ffdd57;
+}
+
+/* Center Section: Search Bar */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 300px; /* Default width for larger screens */
+}
+
+.search-input {
+  padding: 10px 50px 10px 35px; /* Space for icon inside input */
+  border: none;
+  border-radius: 25px;
+  width: 100%; /* Full width */
+  font-size: 16px;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 20px;
+  color: gray;
+  pointer-events: none; /* Avoid interaction with the icon */
+}
+
+/* Right Section: Links and Icons */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.seller-link {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.seller-link:hover {
+  color: #ffdd57;
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.cart-icon, .login-icon {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover, .login-icon:hover {
+  color: #ffdd57;
+}
+
+/* Login Dropdown Styles */
+.login-dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+  z-index: 100;
+}
+
+.dropdown-content a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px 0;
+}
+
+.dropdown-content a:hover {
+  color: #ff7f50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-left .navbar-links {
+    display: none; /* Hide links on smaller screens */
+  }
+
+  .navbar-search {
+    width: 100%; /* Full width */
+    margin-top: 10px;
+  }
+
+  .search-input {
+    padding-left: 35px;
+  }
+
+  .navbar-icons {
+    gap: 15px; /* Adjust gap for smaller screens */
+
+
+  }
+}
+
+/* Logo Image Styling */
+.logo-image {
+  height: 70px; /* Adjust height as needed */
+  width: auto; /* Keeps aspect ratio */
+  display: block;
+}
+
